@@ -1,0 +1,66 @@
+@-webkit-keyframes walk {
+  0% {
+    transform: translateX(-10px);
+  }
+  33% {
+    transform: translateY(10px);
+  }
+  66% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes walk {
+  0% {
+    transform: translateX(-10px);
+  }
+  33% {
+    transform: translateY(10px);
+  }
+  66% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@-webkit-keyframes circleobj {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circleobj {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes top-down {
+  0% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+@keyframes top-down {
+  0% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}/*# sourceMappingURL=config.css.map */

@@ -1,0 +1,7 @@
+.blog-container {
+  padding: 100px 0;
+}
+.blog-container .container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}/*# sourceMappingURL=blog.css.map */

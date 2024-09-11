@@ -1,0 +1,123 @@
+
+$second-text-color: #feb747;
+$bg-color: #fff;
+$text-color: #000 ; 
+$primary: rgb(0, 128, 255) ;
+
+$xxl-font: 4rem ;
+$xl-font: 3rem ;
+$xx-font:2.5rem;
+$x-font: 1.5rem; 
+$s-font: 1.25rem;
+$n-font: 1rem ; 
+
+
+@media screen and (max-width:992px)  {
+    $xxl-font: 1rem ;
+    $xl-font: 3rem ;
+    $xx-font:2rem;
+    $x-font: 1.25rem; 
+    $s-font: 1.1rem;
+    $n-font: 1rem ;  
+}
+
+@mixin  noPointer{
+             -webkit-user-select:none;
+     -khtml-user-select:none;
+     -moz-user-select:none;
+     -o-user-select:none;
+      user-select:none;
+      pointer-events:none;
+}
+
+@mixin flex($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin customBtn($padding, $hover-main , $background , $m-color , $h-color) {
+    padding: $padding;
+       
+            background:-webkit-linear-gradient(  0deg , transparent , 50% , $hover-main 50%);
+            background-size:400px 80px ;
+            background-color: $background;
+            color: $m-color;
+            border-radius: 20px;
+            transition:all .4s ease ;
+
+     &:hover {
+        background-position: 200px;
+        color: $h-color;
+    }
+}
+
+
+@mixin  grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+
+    @media (max-width:992px) {
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+
+@mixin card-grid($grid-width , $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax($grid-width , 1fr));
+    align-items: center;
+    gap: $gap;
+}
+
+
+@mixin box-shadow {
+        box-shadow: 0 0 35px -20px rgba(0, 0, 0, 0.425);
+}
+
+
+
+
+@keyframes walk {
+    0% {
+        transform: translateX(-10px);
+    }
+    33% {
+        transform: translateY(10px);
+
+    }
+    66% {
+        transform: translateX(-15px);
+
+    }
+    100% {
+        transform: translateX(-10px);
+
+    }
+}
+
+@keyframes circleobj{
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes  top-down{
+
+    0%{
+        transform: translateY(40px);
+    }
+     50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(40px);
+    }
+}
+
+

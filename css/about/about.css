@@ -1,0 +1,14 @@
+.benefit .head {
+  padding: 100px 0;
+}
+.benefit .head h2, .benefit .head p {
+  text-align: center;
+}
+.benefit .head p {
+  color: rgb(85, 85, 85);
+}
+.benefit .head h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=about.css.map */

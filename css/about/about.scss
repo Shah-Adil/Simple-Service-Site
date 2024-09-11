@@ -1,0 +1,199 @@
+    .head {
+        padding: 100px 0;
+        h2, p {
+            text-align: center;
+        }
+
+        p {
+            color: rgb(85, 85, 85);
+        }
+        h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+
+
+.benefit {
+
+    .benefit-box {
+        @include card-grid(350px , 20px);
+    }
+
+    .benefit-card {
+        box-shadow: 0 0 26px -15px rgba(0, 0, 0, 0.541);
+        padding: 50px 20px;
+        border-bottom: 3px solid $primary;
+        transition: all .4s ease;
+        .card-icon {
+            i{
+                font-size: 3rem;
+                color: $primary;
+                transition: all .4s ease;
+            }
+        }
+
+        h3 {
+            margin: 20px 0 ;
+            font-size: 1.5rem;
+            transition: all  .4s ease;
+        }
+
+        p {
+            color: rgb(85, 85, 85);
+            margin-bottom: 30px;
+        }
+        a {
+            color: $text-color;
+            transition: all .4s ease;
+            &:hover {
+                color: $second-text-color;
+            }
+        }
+
+        &:hover {
+            border-bottom: 3px solid $second-text-color;
+            h3 , .card-icon i {color: $second-text-color;}
+        }
+    }
+    .benefit-card:nth-child(2) {
+            border-bottom: 3px solid $second-text-color;
+            h3 , .card-icon i {color: $second-text-color;}
+    }
+}
+
+.worker {
+    padding: 0  0  100px  ;
+    .worker-box {
+        @include card-grid(370px , 5px);
+
+        h3 {
+            font-size:1.5rem;
+            font-weight: 500;
+            margin: 20px 0 5px;
+        }
+        p {
+            color: rgb(85, 85, 85);
+            font-size: 1rem;
+        }
+    }
+}
+
+
+.about {
+    padding: 100px 0 ;
+    .about-content   {
+        @include grid;
+    }
+
+    .about-png {
+        display: flex;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        img {
+            padding:0  20px;
+            border-right: 2px solid lighten( $primary,40% );
+      
+        }
+        img:nth-child(3) {
+            border-right: none;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        color: $primary;
+
+    }
+    h2 {
+        font-size: 3rem;
+        line-height:1.2 ;
+        font-weight: 500;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+    p {
+        color: rgb(85, 85, 85);
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+.about-cta {
+    padding: 100px 0 ;
+
+    .about-cta-box  {
+        @include card-grid(290px , 0px);
+
+        .about-cta-card {
+            position: relative;
+            box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.541);
+            padding: 50px 20px ;
+            transition: all .6s ease;
+            
+            img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            h3 , p , a {
+                transition: all .6s ease;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+               
+            }
+            p {
+                color: rgb(85, 85, 85);
+                margin-bottom: 25px;
+            }
+            a {
+                color: $text-color;
+            }
+        }
+        .about-cta-card:hover {
+            background: $primary;
+
+            h3 , p , a {
+                color: $bg-color;
+ 
+            }
+
+        }
+    }
+}
+
+.about-banner {
+    padding-bottom: 100px;
+    background: dodgerblue;
+    .head {
+        h2 , p{
+            color: #fff;
+        }
+    }
+    .banner-card {
+        @include flex(space-evenly);
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+.partner {
+    padding-bottom: 100px;
+    background: dodgerblue;
+    .head {
+        h2 , p{
+            color: #fff;
+        }
+    }
+    .partner-content-box {
+        @include flex(space-between);
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

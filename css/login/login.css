@@ -1,0 +1,9 @@
+.big-banner {
+  height: 500px;
+  background: dodgerblue;
+  display: flex;
+  align-items: center;
+}
+.big-banner .return-page {
+  display: flex;
+}/*# sourceMappingURL=login.css.map */

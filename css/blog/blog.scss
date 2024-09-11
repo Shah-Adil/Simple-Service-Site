@@ -1,0 +1,188 @@
+
+
+.blog-container {
+    padding: 100px 0 ;
+    .container {
+
+        display: grid;
+        grid-template-columns: 1fr  350px ;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .left {
+        .blog-box {
+            @include card-grid(350px , 0px);
+
+            .blog-card  {
+                .card-text {
+                    padding: 0 20px 40px;
+                    h2 {
+                        margin: 10px 0 20px;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+
+                    }
+                    a {
+                        color: $text-color;
+                    }
+                }
+                .card-head {
+                    display: flex;
+                    margin: 20px 0  0;
+                    gap: 20px;
+                    .card-icon {
+                        display: flex;
+                        gap: 5px;
+
+                        i {
+                            color: $primary;
+                        }
+                        h5 {
+                            color: rgba(85 85 85);
+                            font-size: .9rem;
+                            font-weight: 500;
+                        }
+                    }
+                
+                    
+                }
+            }
+        }
+    }
+
+    .right {
+        .right-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .right-title::after {
+            content: " ";
+            display: block;
+            width: 40px;
+            margin-top: 10px;
+            height: 3px;
+            background: $primary;
+        }
+        .form {
+            margin: 30px  0 ;
+            position: relative;
+            input {
+                width: 100%;
+                padding:15px 10px;
+                border: none;
+                background: $primary;
+                color: $bg-color;
+                outline: none;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 11px 20px;
+                color: $bg-color;
+                background-color: $second-text-color;
+                border: none;
+                font-size: 1.25rem;
+            }
+        }
+
+        .recent-post {
+            .recent-poxt-content {
+                margin: 20px 0 ;
+
+                .post-card {
+                    margin-top: 5px; 
+                    @include flex(center);
+                    gap: 20px;
+                    .post-card-text {
+                        flex: 2;
+
+                        h5 {
+                            color: $second-text-color;
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                        }
+                        h3 {
+                            line-height: 1.2;
+                            font-size: 1.25rem;
+                            font-weight:600;
+                            margin-bottom: 5;
+                        }
+                        small {
+                            font-size: .8rem;
+                        }
+                    }
+                    .post-card-img {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        .social {
+            .social-media {
+                margin: 20px 0 ;
+                @include card-grid(150px , 10px);
+
+                .media-box {
+                    padding:10px ;
+                    background: $primary;
+                    @include flex(start);
+                    gap: 20px;
+                    i {
+                        color: $bg-color;
+                        font-size: 2.5rem;
+                        
+                    }
+                    h6 {
+                        font-size: 1rem;
+                        line-height: 1.2;
+                        color: $bg-color;
+                    }
+                }
+            }
+        }
+        .add {
+            padding-top: 20px;
+        }
+    }
+
+}
+
+@media (max-width:1200px) {
+    header .sign .app-btn {
+        margin-right: 0 !important;
+    }
+    .blog-page .container {
+        width: 950px;
+    }
+
+    .blog-container {
+        .container {
+            grid-template-columns: 1fr 250px;
+        }
+        .left {
+            .blog-box {
+                @include card-grid(250px , 10px)
+            }
+        }
+    }
+
+}
+
+@media (max-width:992px) {
+       .blog-page .container {
+        width: 750px;
+    }
+        .blog-container {
+        .container {
+            grid-template-columns: 1fr ;
+        }
+        .left {
+            .blog-box {
+                @include card-grid(250px , 10px)
+            }
+        }
+    }
+}

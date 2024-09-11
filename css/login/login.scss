@@ -1,0 +1,92 @@
+
+.big-banner {
+    height: 500px;
+    background: dodgerblue;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-size: 4rem;
+        color: $bg-color;
+    }
+
+    .return-page {
+        display: flex;
+
+        a:nth-child(1) , p{
+            margin-right: 10px;
+        }
+    
+
+        a , p {
+            color: $bg-color;
+        }
+    }
+    
+}
+
+
+.login-form {
+    padding: 100px 0 ;
+    .container {
+        width: 700px;
+    } 
+
+    form {
+
+        #email , #password {
+            display: block;
+            width: 99%;
+            margin: auto;
+            padding: 20px  ;
+            border: none;
+            outline: none;
+            background: lighten($primary,  45%);
+            border-radius: 10px;
+            margin-bottom: 20px
+        }
+        .email label , .password label {
+            font-size: $n-font; 
+            font-weight: 500;
+            margin-bottom: 5px
+        }
+
+        .check {
+            @include flex(space-between);
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            label {
+                font-size: $n-font;
+                color: rgb(59, 59, 59);
+                margin-left: 5px;
+            }
+            .forget a{
+                color: $primary;
+                font-size: $n-font;
+                
+            }
+        }
+
+        .submit {
+            
+            button {
+            @include customBtn(11px 40px,$primary , $second-text-color, $bg-color, $bg-color);
+                overflow: hidden;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .other {
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px 20px;
+            a {
+                @include customBtn(8px 15px, $primary,lighten($primary , 30%) , $primary, $bg-color);
+                font-size: .8rem;
+
+            }
+        }
+    }
+}
